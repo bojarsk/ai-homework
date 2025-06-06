@@ -1,0 +1,44 @@
+.nav {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  position: relative;
+  z-index: 99;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.3s ease, visibility 0s linear 0.3s;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+  transition-delay: 0s;
+  z-index: 1;
+}
+
+ul {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    opacity: 0;
+    transform: translateY(-200%);
+    pointer-events: none;
+    z-index: 10;
+  }
+}
